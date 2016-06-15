@@ -1,7 +1,7 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@2.14.20
-3 info using node@v4.4.0
+2 info using npm@2.15.5
+3 info using node@v4.4.5
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info prestart inclass8bitstack@1.0.0
 6 info start inclass8bitstack@1.0.0
@@ -9,7 +9,7 @@
 8 info inclass8bitstack@1.0.0 Failed to exec start script
 9 verbose stack Error: inclass8bitstack@1.0.0 start: `node server/app.js`
 9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
 9 verbose stack     at emitTwo (events.js:87:13)
 9 verbose stack     at EventEmitter.emit (events.js:172:7)
 9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
@@ -18,11 +18,11 @@
 9 verbose stack     at maybeClose (internal/child_process.js:827:16)
 9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 10 verbose pkgid inclass8bitstack@1.0.0
-11 verbose cwd /Users/devjana/Desktop/inClass8BitStack
-12 error Darwin 15.4.0
+11 verbose cwd /Users/nick/Desktop/prime/Projects/week_4/full_stack_group/8BitStackInClassExample
+12 error Darwin 14.5.0
 13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
-14 error node v4.4.0
-15 error npm  v2.14.20
+14 error node v4.4.5
+15 error npm  v2.15.5
 16 error code ELIFECYCLE
 17 error inclass8bitstack@1.0.0 start: `node server/app.js`
 17 error Exit status 1

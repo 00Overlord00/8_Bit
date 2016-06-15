@@ -6,7 +6,9 @@ var urlencodedParser=bodyParser.urlencoded( { extended: false } );
 var pg=require('pg');
 // user to connect to the "introToSQL" table on local host
 // postgres must be running and you must have this db name correct
-var connectionString = 'postgres://localhost:5432/introToSQL';
+var connectionString = 'postgres://localhost:5432/db_lecture_6_14';
+
+var 
 
 // static public folder
 app.use( express.static( 'public' ) );
@@ -46,6 +48,42 @@ app.get( '/getUsers', function( req, res ){
   }); // end connect
 });
 
+app.post('/deactivateUser', urlencodedParser, function(req, res) {
+  var results =[];
+
+  pg.connect(connectionString, function(err, client, done) {
+    client.query('UPDATE users SET active = false WHERE id = ' + req.body.id + ';');
+    var query = client.query( 'SELECT * FROM users WHERE active=true ORDER BY id DESC;' );
+    console.log( "query: " + query );
+    // push each row in query into our results array
+    var rows = 0;
+    query.on( 'row', function ( row ){
+      results.push( row );
+    }); // end query push
+    query.on( 'end', function (){
+      return res.json( results );
+    });
+  });
+});
+app.post('/deleteUser', urlencodedParser, function(req, res) {
+  var results =[];
+
+  pg.connect(connectionString, function(err, client, done) {
+  client.query('DELETE FROM users WHERE id = ' + req.body.id + ';');
+  var query = client.query( 'SELECT * FROM users WHERE active=true ORDER BY id DESC;' );
+  console.log( "query: " + query );
+  // push each row in query into our results array
+  var rows = 0;
+  query.on( 'row', function ( row ){
+    results.push( row );
+  }); // end query push
+  query.on( 'end', function (){
+    return res.json( results );
+  });
+
+});
+
+});
 // spin up server
 app.listen( 8080, 'localhost', function( req, res ){
   console.log( "server listening on 8080");
