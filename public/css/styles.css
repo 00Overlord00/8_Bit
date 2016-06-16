@@ -1,0 +1,60 @@
+body {
+  background-color: #00998a;
+  text-align: center;
+}
+
+
+h2 {
+  font: 125px/135px Impact, Helvetica, sans-serif;
+  color: #ffffff;
+  text-height: 125%;
+}
+
+h3 {
+  font: 20px/28px Impact, Helvetica, sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+}
+
+img {
+  float: left;
+  margin: 12px 0 0 25px;
+}
+
+.subhead {
+  background-color: #999999;
+  opacity: 0.75;
+  margin-top: -95px;
+}
+
+#usernameIn {
+  width: 350px;
+  height: 30px;
+  font: 20px/22px bold Helvetica, sans-serif;
+  margin: 40px 0 10px 0;
+}
+
+#outputDiv {
+  background-color: #e6fffd;
+  font: 14px/16px Helvetica, sans-serif;
+  margin: 15px 30px;
+  padding: 20px;
+}
+/*//supposed to add zebra striping to rows*/
+/*tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}*/
+
+/*//clearfix*/
+.group.before, .group.after {
+		content: "";
+		display: table;
+}
+.group.after {
+		clear: both;
+}
+.group {
+		zoom: 1
+  }

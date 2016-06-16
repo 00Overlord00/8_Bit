@@ -8,7 +8,7 @@ var pg=require('pg');
 // postgres must be running and you must have this db name correct
 var connectionString = 'postgres://localhost:5432/db_lecture_6_14';
 
-var 
+ 
 
 // static public folder
 app.use( express.static( 'public' ) );

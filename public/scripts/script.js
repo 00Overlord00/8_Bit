@@ -67,9 +67,9 @@ $( document ).ready( function(){
     {
       var userOut = "<p>" + users[ i ].username + ", active: " + users[ i ].active + " created: " + users[ i ].created + "</p>";
       $('#outputDiv').append( userOut );
-      var userButton = "<button class='deactivate' data-id='" + users[ i ].id + "'>Deactivate " + users[ i ].username + "</button>";
+      var userButton = "<button class='deactivate btn btn-primary btn-sm' data-id='" + users[ i ].id + "'>Deactivate " + users[ i ].username + "</button>";
       $('#outputDiv').append( userButton );
-      var delButton = "<button class='delete' data-id='" + users[ i ].id + "'>Delete " + users[ i ].username + "</button>";
+      var delButton = "<button class='delete btn btn-primary btn-sm' data-id='" + users[ i ].id + "'>Delete " + users[ i ].username + "</button>";
       $('#outputDiv').append( delButton );
 
     } // end for loop
