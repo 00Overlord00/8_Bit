@@ -6,12 +6,19 @@
     <link rel="shortcut icon" href="finger.png">
     <script src="vendors/jquery-3.0.0.min.js" charset="utf-8"></script>
     <script src="scripts/script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" charset="utf-8">
+
   </head>
   <body>
-    <h2>8Bit Stack In Class Example</h2>
-    <input type="text" id="usernameIn" name="usernameIn" value="" placeholder="username">
-    <button type="button" id="addButton" name="addButton">Add User</button>
-    <button type="button" id="getUsers" name="getUsers">Get Users</button>
+    <img src="primelogo.png">
+    <h2>8Bit Stack</h2>
+    <div class="subhead group">
+      <h3>In-Class Example brought to you by the Crud-Mongers</h3>
+    </div>
+    <input type="text" id="usernameIn" name="usernameIn" value="" placeholder="username"><br />
+    <button type="button" id="getUsers" class="btn btn-primary"name="getUsers">Get Users</button>
+    <button type="button" id="addButton" class="btn btn-primary" name="addButton">Add User</button>
     <div id='outputDiv'></div>
   </body>
 </html>
